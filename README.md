@@ -152,7 +152,15 @@ Business goals an agentic **process** achieves. Normative field definitions stay
 | [Autonomous code development](./use_cases/autonomous_code_development/overview.md)  | agent; many sessions → one commit   | git commit   |
 | [Code review agent](./use_cases/code_review_agent/overview.md)     | Review agent; automerge negligible; one session | git commit (reviewed) |
 | [Customer success agent](./use_cases/customer_success/overview.md) | Autonomous agent; process = one session         | session log           |
-| [Signed session logs (Testigo)](./use_cases/signed_session_logs/overview.md) | Operator + agent; process = one session; the log is a signed, hash-chained statement | session log (signed packet) |
+
+
+## Integrations
+
+How existing tools produce or consume the entities of this standard.
+
+| Integration | What it provides | How it plugs in |
+| ----------- | ---------------- | --------------- |
+| [Testigo](./integrations/testigo/README.md) | Signed session logs: a hash-chained, DSSE-signed, selectively disclosable session log with per-action human approval decisions | A packet is a `sessionsLogs[]` entry, or the subject when the process is one session |
 
 
 ---
@@ -204,6 +212,7 @@ Business goals an agentic **process** achieves. Normative field definitions stay
 | -------------------------- | ----------------------------------------------------------------------------------------- |
 | [spec/](./spec/)         | session log, agentic process evidence, agent identifier, alignment evidence, runtime tool |
 | [README.md](./README.md) | Orientation and adoption guide (this file)                                                |
+| [integrations/](./integrations/) | How existing tools produce or consume these entities (mapping, examples, verification) |
 
 
 ---
